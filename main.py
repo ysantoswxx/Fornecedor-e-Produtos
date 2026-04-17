@@ -56,7 +56,8 @@ def cadastrar_fornecedor():
         try:
             nome_fornecedor = input("Digite o nome do fornecedor: ").capitalize()
             idade = input("Digite o nome do fornecedor: ").capitalize()
-            fornecedor =  Fornecedor(nome=nome_fornecedor, idade=idade, preco=)
+            email = input("Digite o email do fornecedor: ").capitalize()
+            fornecedor =  Fornecedor(nome=nome_fornecedor, idade=idade, email=email)
             session.add(fornecedor)
             session.commit()
             print(f"Fornecedor {nome_fornecedor} cadastrado com sucesso!!")
@@ -64,7 +65,7 @@ def cadastrar_fornecedor():
             session.rollback()
             print(f"Ocorreu um erro {erro}")
 
-
+# cadastrar_fornecedor()
 
 
 def cadastrar_produto():
